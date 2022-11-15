@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
-import { Link } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
 import { FaGift } from "react-icons/fa";
 import { AiFillCaretDown } from "react-icons/ai";
+import DropdownListItem from "../UI/DropdownListItem/DropdownListItem";
 
 const NavbarTop = () => {
-    const [toggleDropdown, setToggleDropdown] = useState(false);
+    const [toggleDropdown, setToggleDropdown] = useState<boolean>(false);
     return (
         <>
             <div className="border-b-[1px] border-b-slate-700">
@@ -43,38 +43,30 @@ const NavbarTop = () => {
                                         toggleDropdown ? "" : "hidden"
                                     } z-10 w-44 absolute top-full -right-4 bg-white rounded-b-lg divide-y divide-gray-100 shadow dark:bg-gray-700 text-sm text-gray-700 dark:text-gray-200`}
                                 >
-                                    <li>
-                                        <Link
-                                            to="/profile"
-                                            className="block py-2 px-4 hover:text-secondary transition ease-in-out delay-15 font-medium dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            Profile
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            to="/wish-list"
-                                            className="block py-2 px-4 hover:text-secondary transition ease-in-out delay-15 font-medium dark:hover:bg-gray-600 dark:hover:text-white"
-                                        >
-                                            WishList
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            to="/check-out"
-                                            className="block py-2 px-4 text-sm text-gray-700 hover:text-secondary transition ease-in-out delay-15 font-medium dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                        >
-                                            Check Out
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            to="/sign-in"
-                                            className="block py-2 px-4 text-sm text-gray-700 hover:text-secondary transition ease-in-out delay-15 font-medium dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                                        >
-                                            Sign In
-                                        </Link>
-                                    </li>
+                                    <DropdownListItem
+                                        link="/profile"
+                                        className="block py-2 px-4 hover:text-secondary transition ease-in-out delay-15 font-medium dark:hover:bg-gray-600 dark:hover:text-white"
+                                    >
+                                        Profile
+                                    </DropdownListItem>
+                                    <DropdownListItem
+                                        link="/wish-list"
+                                        className="block py-2 px-4 hover:text-secondary transition ease-in-out delay-15 font-medium dark:hover:bg-gray-600 dark:hover:text-white"
+                                    >
+                                        WishList
+                                    </DropdownListItem>
+                                    <DropdownListItem
+                                        link="/check-out"
+                                        className="block py-2 px-4 hover:text-secondary transition ease-in-out delay-15 font-medium dark:hover:bg-gray-600 dark:hover:text-white"
+                                    >
+                                        Check Out
+                                    </DropdownListItem>
+                                    <DropdownListItem
+                                        link="/login"
+                                        className="block py-2 px-4 hover:text-secondary transition ease-in-out delay-15 font-medium dark:hover:bg-gray-600 dark:hover:text-white"
+                                    >
+                                        Login
+                                    </DropdownListItem>
                                 </ul>
                             </li>
                         </ul>
