@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AiFillLock } from "react-icons/ai";
 
 const NavbarMiddle = () => {
-    const [toggleMenu, setToggleMenu] = useState(false);
+    const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
     return (
         <nav className="container w-full z-20 grid grid-cols-6 md:grid-cols-2 sm:grid-cols-2">
@@ -35,16 +35,16 @@ const NavbarMiddle = () => {
                     className="inline-flex relative my-4 items-center w-12 h-12 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:border-1 focus:outline-none focus:ring-2 focus:border-1"
                 >
                     <svg
-                        className="w-6 h-6 text-white"
+                        className="w-8 h-8 text-white"
                         aria-hidden="true"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                     >
                         <path
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                            clip-rule="evenodd"
+                            clipRule="evenodd"
                         ></path>
                     </svg>
                 </button>
@@ -67,7 +67,7 @@ const NavbarMiddle = () => {
                 </li>
             </ul>
             {toggleMenu && (
-                <ul className="w-[92%] top-[38%] flex absolute flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100  dark:bg-gray-800 ">
+                <ul className="w-[92%] z-40 top-[38%] flex absolute flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100  dark:bg-gray-800 ">
                     <li>
                         <Link
                             to="#"
