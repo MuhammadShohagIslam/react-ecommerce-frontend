@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 type DropdownListItemProps = {
     children: string;
     link: string;
-    className: string;
+    className?: string;
 };
 
 const DropdownListItem = ({

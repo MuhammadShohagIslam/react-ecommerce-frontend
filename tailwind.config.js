@@ -2,7 +2,6 @@
 module.exports = {
     content: [
         "./src/**/*.{js,jsx,ts,tsx}",
-        "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
     ],
     theme: {
         screens: {
@@ -11,11 +10,10 @@ module.exports = {
             'lg': {'min': '1024px'},
         },
         extend: {
-            colors: {
-                primary: "#0F172A",
-                secondary:"#38BDF8"
-            },
+            colors:{
+                header:"#F2F2F2",
+            }
         },
     },
-    plugins: [require("flowbite/plugin")],
+    plugins: [require("daisyui")],
 };

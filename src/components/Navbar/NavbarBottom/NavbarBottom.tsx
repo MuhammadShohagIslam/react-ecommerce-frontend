@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { AiFillCaretDown } from "react-icons/ai";
 import { FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import DropdownListItem from "../UI/DropdownListItem/DropdownListItem";
+import DropdownListItem from "../../UI/DropdownListItem/DropdownListItem";
+
 
 const NavbarBottom = () => {
     const [toggleDropdown, setToggleDropdown] = useState<boolean>(false);
