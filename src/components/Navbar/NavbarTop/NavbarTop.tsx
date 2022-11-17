@@ -1,12 +1,14 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { AiFillCaretDown } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { FaGift } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
 import DropdownListItem from "../../UI/DropdownListItem/DropdownListItem";
 
-const NavbarTop = () => {
-    const [toggleDropdownColor, setToggleDropdownColor] = useState<boolean>(true);
+const NavbarTop: React.FC = (): JSX.Element => {
+    const [toggleDropdownColor, setToggleDropdownColor] =
+        useState<boolean>(true);
+        
     return (
         <>
             <div className="border-b-[1px] border-b-slate-700">
@@ -15,8 +17,8 @@ const NavbarTop = () => {
                         <Typewriter
                             options={{
                                 strings: [
-                                    "Welcome to Emarket !",
-                                    " Wrap new offers / gift every single day on Weekends",
+                                    "Welcome to Aladin!",
+                                    " Wrap New Offers / Gift Every Single Day on Weekends",
                                 ],
                                 autoStart: true,
                                 loop: true,
@@ -31,16 +33,24 @@ const NavbarTop = () => {
                             </li>
                             <li>
                                 <label
-                                  
-                                    className={`text-primary ${toggleDropdownColor ? "": "text-success"} relative  hover:text-success transition ease-in-out delay-15 py-2 cursor-pointer text-center inline-flex items-center relative`}
-                                    onClick={()=> setToggleDropdownColor(!toggleDropdownColor)}
+                                    className={`text-primary ${
+                                        toggleDropdownColor
+                                            ? ""
+                                            : "text-success"
+                                    } relative  hover:text-success transition ease-in-out delay-15 py-2 cursor-pointer text-center inline-flex items-center relative`}
+                                    onClick={() =>
+                                        setToggleDropdownColor(
+                                            !toggleDropdownColor
+                                        )
+                                    }
                                 >
                                     <CgProfile className="mr-1" /> My Account{" "}
                                     <AiFillCaretDown className="ml-1 mt-1" />
                                 </label>
                                 <ul
-                                  
-                                    className={`${toggleDropdownColor ? "hidden": ""} absolute menu menu-compact right-24 md:right-9 z-10 sm:right-9 dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52`}
+                                    className={`${
+                                        toggleDropdownColor ? "hidden" : ""
+                                    } absolute menu menu-compact right-24 md:right-9 z-10 sm:right-9 dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52`}
                                 >
                                     <DropdownListItem link="/profile">
                                         Profile

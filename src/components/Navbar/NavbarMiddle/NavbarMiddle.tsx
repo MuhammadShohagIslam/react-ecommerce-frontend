@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavbarMiddle = () => {
+const NavbarMiddle: React.FC = (): JSX.Element => {
     const menuListItem = () => {
         return (
             <>

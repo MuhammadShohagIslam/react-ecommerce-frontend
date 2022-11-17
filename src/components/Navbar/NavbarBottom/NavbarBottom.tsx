@@ -1,7 +1,7 @@
 import React from "react";
 import { FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
 
-const NavbarBottom = () => {
+const NavbarBottom: React.FC = (): JSX.Element => {
     return (
         <div className="container grid grid-cols-3 pt-2 gap-3 sm:gap-0">
             <div className="col-span-2 flex justify-end sm:justify-start">
