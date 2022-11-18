@@ -5,12 +5,12 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ImageCard from "../../assets/category/beauty.jpg";
 
-const Products = () => {
+const CardImgSides = () => {
     return (
         <div className="container pb-16">
-            <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+            <div className="grid grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
                 <Link to="/">
-                    <div className="card bg-base-100 shadow-xl group cursor-pointer">
+                    <div className="card bg-base-100 shadow-xl group grid grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
                         <figure className="h-72 relative">
                             <div className="absolute top-3 rounded-full left-3 w-14 h-14 bg-success flex justify-center items-center flex-col">
                                 <span className="text-white -mb-2">Off</span>
@@ -38,9 +38,9 @@ const Products = () => {
                                 alt="Shoes"
                             />
                         </figure>
-                        <div className="card-body pt-3 flex justify-center items-center">
-                            <p className="mt-1">Life Zed Air cx5</p>
-                            <div >
+                        <div className="flex flex-col justify-center p-8 md:items-center sm:items-center md:p-6 sm:p-6 md:pt-3 sm:pt-3">
+                            <p>Life Zed Air cx5</p>
+                            <div className="py-2">
                                 <span className="mt-1 text-xl font-medium mr-2 text-gray-900">
                                     $35
                                 </span>
@@ -66,4 +66,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default CardImgSides;
