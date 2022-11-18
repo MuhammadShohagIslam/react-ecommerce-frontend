@@ -12,6 +12,7 @@ module.exports = {
         extend: {
             colors:{
                 header:"#F2F2F2",
+                accent:"#757575"
             }
         },
     },

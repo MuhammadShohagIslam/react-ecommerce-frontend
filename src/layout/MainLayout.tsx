@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
 
-const main = ({ children }: React.PropsWithChildren): JSX.Element => {
+const MainLayout = ({ children }: React.PropsWithChildren): JSX.Element => {
     return (
         <>
             <Navbar />
@@ -10,4 +10,4 @@ const main = ({ children }: React.PropsWithChildren): JSX.Element => {
     );
 };
 
-export default main;
+export default MainLayout;
