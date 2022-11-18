@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../../components/Banner/Banner";
+import Blogs from "../../components/Blogs/Blogs";
 import CardImgSides from "../../components/CardImgSides/CardImgSides";
 import Products from "../../components/Products/Products";
 import Services from "../../components/Services/Services";
@@ -14,6 +15,7 @@ const Home = () => {
             <ShopByCategories/>
             <Products/>
             <CardImgSides/>
+            <Blogs/>
         </MainLayout>
     );
 };
