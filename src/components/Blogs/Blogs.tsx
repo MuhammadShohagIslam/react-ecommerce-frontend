@@ -5,7 +5,7 @@ import { BiUserPlus } from "react-icons/bi";
 const Blogs = () => {
     return (
         <div className="container">
-            <div className="grid grid-cols-4">
+            <div className="grid grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
                 <div className="card bg-base-100 shadow-xl">
                     <figure>
                         <img
